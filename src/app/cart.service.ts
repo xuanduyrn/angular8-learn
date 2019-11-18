@@ -1,5 +1,6 @@
 // Quản lý dữ liệu
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -7,7 +8,9 @@ import { Injectable } from '@angular/core';
 
 export class CartServices {
   items = [];
-  constructor() {};
+  constructor(
+    private http: HttpClient
+  ) {};
 
   addToCart(product) {
     this.items.push(product);
@@ -20,5 +23,10 @@ export class CartServices {
   clearCart() {
     this.items  = [];
     return this.items;
+  }
+
+  //phương thức để truy xuất dữ liệu vận chuyển
+  getShippingPrices () {
+    return this.http.get('/assets/shipping.json')
   }
 }

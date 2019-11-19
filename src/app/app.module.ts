@@ -16,6 +16,8 @@ import { CartComponent } from './shop/cart/cart.component';
 
 import { HeroesComponent } from './hero/heroes/heroes.component';
 import { HeroDetailComponent } from './hero/hero-detail/hero-detail.component';
+import { HeroSearchComponent } from './hero/hero-search/hero-search.component';
+
 import { MessagesComponent } from './messages/messages.component';
 import { DashBoardComponent } from './dashboard/dashboard.component';
 
@@ -32,8 +34,9 @@ import { InMemoryDataService } from './in-memory-data.service';
     ShippingComponent,
     HeroesComponent,
     HeroDetailComponent,
+    HeroSearchComponent,
     MessagesComponent,
-    DashBoardComponent
+    DashBoardComponent,
   ],
   imports: [
     BrowserModule,

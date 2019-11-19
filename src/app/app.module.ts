@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { HttpClientInMemoryWebApiModule, InMemoryDbService } from 'angular-in-memory-web-api';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,6 +18,8 @@ import { HeroesComponent } from './hero/heroes/heroes.component';
 import { HeroDetailComponent } from './hero/hero-detail/hero-detail.component';
 import { MessagesComponent } from './messages/messages.component';
 import { DashBoardComponent } from './dashboard/dashboard.component';
+
+import { InMemoryDataService } from './in-memory-data.service';
 
 @NgModule({
   declarations: [
@@ -46,8 +49,11 @@ import { DashBoardComponent } from './dashboard/dashboard.component';
       { path: 'hero', component: HeroesComponent },
       { path: 'hero/:heroId', component: HeroDetailComponent },
       { path: 'message', component: MessagesComponent },
-      { path: 'dashboard', component: DashBoardComponent}
-    ])
+      { path: 'dashboard', component: DashBoardComponent }
+    ]),
+    HttpClientInMemoryWebApiModule.forRoot(
+      InMemoryDataService, { dataEncapsulation: false }
+    )
   ],
   providers: [],
   bootstrap: [AppComponent]

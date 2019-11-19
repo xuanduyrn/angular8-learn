@@ -17,6 +17,8 @@ import { CartComponent } from './shop/cart/cart.component';
 // Hero
 import { HeroesComponent } from './hero/heroes/heroes.component';
 import { HeroDetailComponent } from './hero/hero-detail/hero-detail.component';
+// Message
+import { MessagesComponent } from './messages/messages.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import { HeroDetailComponent } from './hero/hero-detail/hero-detail.component';
     ShippingComponent,
     // hero
     HeroesComponent,
-    HeroDetailComponent
+    HeroDetailComponent,
+    // Message
+    MessagesComponent
   ],
   imports: [
     BrowserModule,
@@ -46,7 +50,9 @@ import { HeroDetailComponent } from './hero/hero-detail/hero-detail.component';
       { path: 'shipping', component: ShippingComponent },
       // Hero
       { path: 'hero', component: HeroesComponent },
-      { path: 'hero/:heroId', component: HeroDetailComponent }
+      { path: 'hero/:heroId', component: HeroDetailComponent },
+      // message
+      { path: 'message', component: MessagesComponent }
     ])
   ],
   providers: [],

@@ -15,7 +15,8 @@ import { ShippingComponent } from './shop/shipping/shipping.component';
 import { CartComponent } from './shop/cart/cart.component';
 
 // Hero
-import { HeroesComponent } from './hero/heroes/heroes.component'
+import { HeroesComponent } from './hero/heroes/heroes.component';
+import { HeroDetailComponent } from './hero/hero-detail/hero-detail.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { HeroesComponent } from './hero/heroes/heroes.component'
     CartComponent,
     ShippingComponent,
     // hero
-    HeroesComponent
+    HeroesComponent,
+    HeroDetailComponent
   ],
   imports: [
     BrowserModule,
@@ -44,6 +46,7 @@ import { HeroesComponent } from './hero/heroes/heroes.component'
       { path: 'shipping', component: ShippingComponent },
       // Hero
       { path: 'hero', component: HeroesComponent },
+      { path: 'hero/:heroId', component: HeroDetailComponent }
     ])
   ],
   providers: [],

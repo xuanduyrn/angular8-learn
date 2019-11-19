@@ -19,6 +19,8 @@ import { HeroesComponent } from './hero/heroes/heroes.component';
 import { HeroDetailComponent } from './hero/hero-detail/hero-detail.component';
 // Message
 import { MessagesComponent } from './messages/messages.component';
+// dashboard
+import { DashBoardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +36,9 @@ import { MessagesComponent } from './messages/messages.component';
     HeroesComponent,
     HeroDetailComponent,
     // Message
-    MessagesComponent
+    MessagesComponent,
+    // dashboard
+    DashBoardComponent
   ],
   imports: [
     BrowserModule,
@@ -52,7 +56,9 @@ import { MessagesComponent } from './messages/messages.component';
       { path: 'hero', component: HeroesComponent },
       { path: 'hero/:heroId', component: HeroDetailComponent },
       // message
-      { path: 'message', component: MessagesComponent }
+      { path: 'message', component: MessagesComponent },
+      // dashboard
+      { path: 'dashboard', component: DashBoardComponent}
     ])
   ],
   providers: [],
